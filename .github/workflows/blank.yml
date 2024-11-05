@@ -1,0 +1,13 @@
+name: Every minute
+on:
+  schedule:
+    # Runs every day at 2 AM UTC
+    - cron: '* * * * *'
+
+jobs:
+  trigger-api:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger API
+        run: |
+          echo "Triggering API..."
